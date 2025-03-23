@@ -9,8 +9,7 @@ package lab01;
 /**
  * Contém a estrutura de implementação de um Ingresso.
  * 
- * @author Gabriel Leite - 216180
- * @author Caio Rhoden - 214129
+ * @author José Paliares - 260634
  */
 public abstract class Ingresso {
 
