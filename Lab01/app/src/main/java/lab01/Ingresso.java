@@ -14,13 +14,16 @@ package lab01;
 public abstract class Ingresso {
 
     private Evento evento;
+    private int codigo;
 
     /**
      * Construtor da classe Ingresso
      * @param evento o evento associado ao Ingresso
+     * @param codigo o codigo associado ao Ingresso
      */
-    public Ingresso(Evento evento){
+    public Ingresso(Evento evento, int codigo){
         this.evento = evento;
+        this.codigo = codigo;
     }
 
     /**
