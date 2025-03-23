@@ -7,5 +7,21 @@ package lab01;
  */
 
 public class EventoFestival extends Evento {
-    //IMPLEMENTAR
+    
+
+    private String tema;
+    private String patrocinador;
+
+    /**
+     * Construtor da classe EventoFestival herdando o construtor da
+     * classe pai e adicionando outros atributos
+     * @param tema o tema do Festival(ex. musica, gastronomia, cinema)
+     * @param patrocinador o patrocinador principal do festival
+     */
+    public EventoFestival(String nome, Local local, double precoIngresso,
+                        String tema, String patrocinador){
+        super(nome, local, precoIngresso);
+        this.tema = tema;
+        this.patrocinador = patrocinador;
+    }
 }

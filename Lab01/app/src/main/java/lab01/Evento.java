@@ -20,6 +20,7 @@ public abstract class Evento {
      * Construtor da classe Evento
      * @param nome o nome do Evento
      * @param local o local associado ao Evento
+     * @param precoIngresso o preco do Ingresso
      */
     public Evento(String nome, Local local, double precoIngresso){
         this.nome = nome;
