@@ -24,4 +24,11 @@ public class EventoFestival extends Evento {
         this.tema = tema;
         this.patrocinador = patrocinador;
     }
+
+    public String getTema(){
+        return tema;
+    }
+    public String getPatrocinador(){
+        return patrocinador;
+    }
 }

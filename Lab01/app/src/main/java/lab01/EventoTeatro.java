@@ -24,4 +24,12 @@ public class EventoTeatro extends Evento {
         this.diretor = diretor;
         this.atos = atos;
     }
+
+    public int getAtos(){
+        return atos;
+    }
+    
+    public String getDiretor(){
+        return diretor;
+    }
 }

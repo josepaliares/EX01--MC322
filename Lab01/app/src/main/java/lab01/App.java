@@ -31,9 +31,37 @@ public class App {
 
         // DEMONSTRAÇÃO PASSO 1
 
-
-
         // DEMONSTRAÇÃO PASSO 2
+
+        // Reaproveitei o local do exemplo de cima
+        EventoEsporte evento1 = new EventoEsporte("Final paulistao - jogo 1", local, 
+                                                150, "Futebol", "Palmeiras", "Corinthians");
+        System.out.println("Evento 1: " + evento1.getNome());
+        System.out.println("Local: " + local.getNome());
+        System.out.println("Capacidade: " + local.getCapacidade());
+        System.out.println("Preço do ingresso base: " + evento1.getPrecoIngresso());
+        System.out.println("Esporte: " + evento1.getTipoEsporte());
+        System.out.println("Equipe da casa: " + evento1.getEquipe1());
+        System.out.println("Equipe visitante: " + evento1.getEquipe2());
+
+        Local localFestival = new Local("Parque da Expoflora", 500);
+        EventoFestival evento2 = nem EventoFestival("Expoflora", localFestival, 50, "Flores", "Cia Verde");
+        System.out.println("Evento 2: " + evento2.getNome());
+        System.out.println("Local: " + localFestival.getNome());
+        System.out.println("Capacidade: " + localFestival.getCapacidade());
+        System.out.println("Preço do ingresso base: " + evento2.getPrecoIngresso());
+        System.out.println("Tema: " + evento2.getTema());
+        System.out.println("Patrocinador principal: " + evento2.getPatrocinador());
+
+        Local localShow = new Local("Gate 22", 100);
+        EventoShow evento3 = new EventoShow("SUBMUNDO808", localShow, 80, "Eletronica", 6);
+
+        Local localTeatro = new Local("Teatro Amazonas", 200);
+        EventoTeatro = new EventoTeatro("Opera Carmen", localFestival, 50, "Luca Salsi", 4);
+
+
+
+
 
 
 

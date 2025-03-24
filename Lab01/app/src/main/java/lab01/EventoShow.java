@@ -24,4 +24,11 @@ public class EventoShow extends Evento {
         this.genero = genero;
         this.duracao = duracao;
     }
+
+    public String getGenero(){
+        return genero;
+    }
+    public int getDuracao(){
+        return duracao;
+    }
 }

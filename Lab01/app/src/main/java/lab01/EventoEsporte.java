@@ -27,4 +27,14 @@ public class EventoEsporte extends Evento {
         this.equipe1 = equipe1;
         this.equipe2 = equipe2;
     }
+
+    public String getTipoEsporte(){
+        return tipoEsporte;
+    }
+    public String getEquipe1(){
+        return equipe1;
+    }
+    public String getEquipe2(){
+        return equipe2;
+    }
 }

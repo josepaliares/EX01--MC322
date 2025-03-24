@@ -4,6 +4,9 @@
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
+import java.util.List;
+import java.util.ArrayList;
+
 package lab01;
 
 /**
@@ -15,6 +18,7 @@ public abstract class Evento {
     private String nome;
     private Local local;
     private double precoIngresso;
+    private List<Ingresso> ingressosVendidos;
 
     /**
      * Construtor da classe Evento
@@ -26,6 +30,7 @@ public abstract class Evento {
         this.nome = nome;
         this.local = local;
         this.precoIngresso = precoIngresso;
+        this.ingressosVendidos = new ArrayList<>();
     }
 
     /**
