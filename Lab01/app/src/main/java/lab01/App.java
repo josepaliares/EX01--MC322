@@ -23,7 +23,7 @@ public class App {
         // DEMONSTRAÇÃO CÓDIGO PRELIMINAR
         
         Local local = new Local("Allianz Parque", 300);
-        Usuario usuario = new Usuario("Gabriel", "gabriel@gmail.com");
+        Usuario usuario = new Usuario("Gabriel", "gabriel@gmail.com", 20, false);
 
         // Dados sobre evento
         System.out.println("Local: " + local.getNome());
@@ -31,37 +31,54 @@ public class App {
 
         // DEMONSTRAÇÃO PASSO 1
 
+        Local localExemplo1 = new Local("Campinas Hall", 100);
+        Evento eventoExemplo1 = new Evento("Entorta Bixo", localExemplo1, 50);
+
+        IngressoMeia meiaExemplo = new IngressoMeia(eventoExemplo1, 0);
+        IngressoInteira inteiraExemplo = new IngressoInteira(eventoExemplo1, 1);
+        IngressoVIP vipExemplo = new IngressoVIP(eventoExemplo1, 2);
+        IngressoCamarote camaroteExemplo = new IngressoCamarote(eventoExemplo1, 3);
+
+        System.out.println("Preço dos ingressos para o evento: " + eventoExemplo1.getNome());
+        System.out.println("Meia: " + meiaExemplo.getPreco());
+        System.out.println("Inteira: " + inteiraExemplo.getPreco());
+        System.out.println("VIP: " + vipExemplo.getPreco());
+        System.out.println("Camarote: " + CamaroteExemplo.getPreco());
+
         // DEMONSTRAÇÃO PASSO 2
 
-        // Reaproveitei o local do exemplo de cima
-        EventoEsporte evento1 = new EventoEsporte("Final paulistao - jogo 1", local, 
-                                                150, "Futebol", "Palmeiras", "Corinthians");
-        System.out.println("Evento 1: " + evento1.getNome());
-        System.out.println("Local: " + local.getNome());
-        System.out.println("Capacidade: " + local.getCapacidade());
-        System.out.println("Preço do ingresso base: " + evento1.getPrecoIngresso());
-        System.out.println("Esporte: " + evento1.getTipoEsporte());
-        System.out.println("Equipe da casa: " + evento1.getEquipe1());
-        System.out.println("Equipe visitante: " + evento1.getEquipe2());
+        Local localExemplo2 = local; // Foi no Allianz Parque
+        EventoEsporte eventoExemplo2 = new EventoEsporte("Final paulistão - jogo 1", localExemplo2, 120, "Futebol", "Palmeiras", "Corinthians");
+        eventoExemplo2.exibirDetalhes();
 
-        Local localFestival = new Local("Parque da Expoflora", 500);
-        EventoFestival evento2 = nem EventoFestival("Expoflora", localFestival, 50, "Flores", "Cia Verde");
+        Local localExemplo3 = new Local("Parque da Expoflora", 300);
+        EventoFestival eventoExemplo3 = new EventoFestival("Expoflora", local, 50, "Flores", "CiaVerde");
+        eventoExemplo3.exibirDetalhes();
 
-        Local localShow = new Local("Gate 22", 100);
-        EventoShow evento3 = new EventoShow("SUBMUNDO808", localShow, 80, "Eletronica", 6);
+        Local localExemplo4 = new Local("Gate 22", 50);
+        EventoShow eventoExemplo4 = new EventoShow("SUBMUNDO808", local, 80, "Rock", 6);
+        eventoExemplo4.exibirDetalhes();
 
-        Local localTeatro = new Local("Teatro Amazonas", 200);
-        EventoTeatro = new EventoTeatro("Opera Carmen", localFestival, 50, "Luca Salsi", 4);
-
-
-
-
-
-
+        Local localExemplo5 = new Local("National Theatre - London", 100);
+        EventoTeatro eventoExemplo5 = new EventoTeatro("Peter Pan", local, 100, 2, "Julian Ovendon");
+        eventoExemplo5.exibirDetalhes();
 
         // DEMONSTRAÇÃO PASSO 3
 
+        Usuario usuario1 = new Usuario("Arthur", "a@gmail.com", 15, false);
+        Usuario usuario2 = new Usuario("Bruno", "b@gmail.com", 20, true);
+        Usuario usuario3 = new Usuario("Caio", "c@gmail.com", 18, false);
+        Usuario usuario4 = new Usuario("Daniel", "d@gmail.com", 12, false);
 
+        eventoExemplo1.adicionarIngresso(meiaExemplo, usuario3);
+        eventoExemplo1.adicionarIngresso(meiaExemplo, usuario4);
+        eventoExemplo1.adicionarIngresso(inteiraExemplo, usuario3);
+        eventoExemplo1.adicionarIngresso(vipExemplo, usuario3);
+        eventoExemplo1.adicionarIngresso(vipExemplo, usuario2);
+        eventoExemplo1.adicionarIngresso(camaroteExemplo, usuario1);
+
+        faturamentoExemplo1 = eventoExemplo1.calcularFaturamento();
+        System.out.println("Faturamento do " + eventoExemplo1.getNome() + ": R$" + String.format("%.2f", faturamentoExemplo1));
 
         // DEMONSTRAÇÃO PASSO 4
 

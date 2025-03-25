@@ -31,4 +31,11 @@ public class EventoFestival extends Evento {
     public String getPatrocinador(){
         return patrocinador;
     }
+
+    @Override
+    public void exibirDetalhes(){
+        exibirInfosBasicas();
+        System.out.println("Tema do festival:" + this.getTema());
+        System.out.println("Patrocinador principal" + this.getPatrocinador());
+    }
 }

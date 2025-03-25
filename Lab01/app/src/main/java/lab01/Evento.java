@@ -49,6 +49,13 @@ public abstract class Evento {
         this.nome = nome;
     }
 
+
+    public void exibirInfosBasicas(){
+        System.out.println("Nome do evento" + this.getNome());
+        System.out.println("Local do evento: " + this.local.getNome());
+    }
+    public abstract void exibirDetalhes();
+
     /**
      * Retorna o preço do ingresso do Evento
      * @return o precoIngresso do Evento

@@ -37,4 +37,11 @@ public class EventoEsporte extends Evento {
     public String getEquipe2(){
         return equipe2;
     }
+
+    @Override
+    public void exibirDetalhes(){
+        exibirInfosBasicas();
+        System.out.println("Esporte:" + this.getTipoEsporte());
+        System.out.println(this.getEquipe1() + " vs " + this.getEquipe2());
+    }
 }

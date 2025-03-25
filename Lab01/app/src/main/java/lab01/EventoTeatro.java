@@ -32,4 +32,11 @@ public class EventoTeatro extends Evento {
     public String getDiretor(){
         return diretor;
     }
+
+    @Override
+    public void exibirDetalhes(){
+        exibirInfosBasicas();
+        System.out.println("Total de atos:" + this.getAtos());
+        System.out.println("Diretor da peça" + this.getDiretor());
+    }
 }

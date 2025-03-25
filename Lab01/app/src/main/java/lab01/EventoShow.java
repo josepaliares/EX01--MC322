@@ -31,4 +31,11 @@ public class EventoShow extends Evento {
     public int getDuracao(){
         return duracao;
     }
+
+    @Override
+    public void exibirDetalhes(){
+        exibirInfosBasicas();
+        System.out.println("Gênero musical do show:" + this.getGenero());
+        System.out.println("Duração do show: " + this.getDuracao());
+    }
 }
