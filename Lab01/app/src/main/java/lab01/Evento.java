@@ -64,4 +64,33 @@ public abstract class Evento {
     public void setPrecoIngresso(double precoIngresso){
         this.precoIngresso = precoIngresso;
     }
+
+    public void adicionarIngresso(Ingresso ingresso, Usuario usuario) {
+
+        if (ingresso instanceof IngressoMeia) {
+            if (usuario.getIdade() >= 18) {
+                System.out.println("Usuário não pode comprar ingresso meia!");
+                return;
+            }
+        } else if (ingresso instanceof IngressoVIP) {
+            if (!usuario.ehVip()) {
+                System.out.println("Usuário precisa ser VIP para comprar este ingresso!");
+                return;
+            }
+        }
+        
+        ingressosVendidos.add(ingresso);
+        usuario.adicionarIngresso(ingresso);
+        System.out.println("Ingresso comprado com sucesso!");
+    }
+
+    public double calcularFaturamento() {
+        double faturamento = 0.0;
+        for (Ingresso ingresso : ingressosVendidos) {
+            faturamento += ingresso.getPreco();
+        }
+        return faturamento;
+    }
+
+
 }

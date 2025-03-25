@@ -46,12 +46,6 @@ public class App {
 
         Local localFestival = new Local("Parque da Expoflora", 500);
         EventoFestival evento2 = nem EventoFestival("Expoflora", localFestival, 50, "Flores", "Cia Verde");
-        System.out.println("Evento 2: " + evento2.getNome());
-        System.out.println("Local: " + localFestival.getNome());
-        System.out.println("Capacidade: " + localFestival.getCapacidade());
-        System.out.println("Preço do ingresso base: " + evento2.getPrecoIngresso());
-        System.out.println("Tema: " + evento2.getTema());
-        System.out.println("Patrocinador principal: " + evento2.getPatrocinador());
 
         Local localShow = new Local("Gate 22", 100);
         EventoShow evento3 = new EventoShow("SUBMUNDO808", localShow, 80, "Eletronica", 6);
