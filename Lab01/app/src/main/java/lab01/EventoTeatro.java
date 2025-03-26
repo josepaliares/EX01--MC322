@@ -8,7 +8,6 @@ package lab01;
 
 public class EventoTeatro extends Evento {
     
-
     private String diretor;
     private int atos;
 
@@ -25,14 +24,25 @@ public class EventoTeatro extends Evento {
         this.atos = atos;
     }
 
+    /**
+    * Retorna a quantia de atos na peça de teatro 
+     * @return a quantia de atos na peça de teatro
+     */
     public int getAtos(){
         return atos;
     }
     
+    /**
+     * Retorna o diretor responsável pela peça
+     * @return o diretor responsável pela peça
+     */
     public String getDiretor(){
         return diretor;
     }
 
+    /**
+     * Exibe os detalhes presentes em uma peça de teatro
+     */
     @Override
     public void exibirDetalhes(){
         exibirInfosBasicas();

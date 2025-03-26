@@ -34,12 +34,16 @@ public class Usuario {
 
     /**
      * Retorna o nome do usuário
-     * @return o nome do usupario
+     * @return o nome do usuário
      */
     public String getNome(){
         return nome;
     }
-
+    
+    /**
+     * Retorna o email do usuário
+     * @return o email do usuário
+     */
     public String getEmail(){
         return email;
     }
@@ -68,10 +72,18 @@ public class Usuario {
         this.nome = nome;
     }
     
+    /**
+     * Retorna o ingresso que o usuário comprou
+     * @return o ingresso que o usuário comprou
+     */
     public Ingresso getIngresso() {
         return ingresso;
     }
 
+    /**
+     * Atribui um ingresso ao usuário
+     * @param ingresso o ingresso a ser atribuído
+     */
     public void setIngresso(Ingresso ingresso){
         this.ingresso = ingresso;
     }

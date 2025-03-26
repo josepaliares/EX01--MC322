@@ -53,11 +53,18 @@ public abstract class Evento {
         this.nome = nome;
     }
 
-
+    /**
+     * Exibe as informações básicas do evento
+     */
     public void exibirInfosBasicas(){
         System.out.println("Nome do evento: " + this.getNome());
         System.out.println("Local do evento: " + this.local.getNome());
     }
+
+    /**
+     * Método abstrato para exibir os detalhes de cada evento variando
+     * com o tipo do evento (Ex. esporte, teatro, etc)
+     */
     public abstract void exibirDetalhes();
 
     /**
@@ -76,10 +83,20 @@ public abstract class Evento {
         this.precoIngresso = precoIngresso;
     }
 
+    /**
+     * Retorna a lista de ingressos vendidos
+     * @return a lista de ingressos vendidos
+     */
     public List<Ingresso> getIngressosVendidos(){
         return ingressosVendidos;
     }
 
+    /**
+     * Simula uma compra de ingresso e atribui o ingresso a um usuário
+     * caso a compra for válida
+     * @param ingresso o ingresso a ser comprado
+     * @param usuario o usuário que vai comprar
+     */
     public void adicionarIngresso(Ingresso ingresso, Usuario usuario) {
 
         if (ingresso instanceof IngressoMeia) {
@@ -98,7 +115,10 @@ public abstract class Evento {
         usuario.setIngresso(ingresso);
         System.out.println("Ingresso comprado com sucesso!");
     }
-
+    /**
+     * Retorna a soma do preço dos ingressos presentes na lista de ingressos
+     * @return a soma do preço dos ingressos presentes na lista de ingressos
+     */
     public double calcularFaturamento() {
         double faturamento = 0.0;
         for (Ingresso ingresso : ingressosVendidos) {

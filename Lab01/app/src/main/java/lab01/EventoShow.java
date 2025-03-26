@@ -27,19 +27,39 @@ public class EventoShow extends Evento {
         this.duracao = duracao;
     }
 
+    /**
+     * Retorna o gênero musical do show
+     * @return o gênero musical do show
+     */
     public String getGenero(){
         return genero;
     }
+    /**
+     * Retorna a duração em horas do show
+     * @return a duração em horas do show
+     */
     public int getDuracao(){
         return duracao;
     }
+
+    /**
+     * Retorna o artista do show
+     * @return o artista do show
+     */
     public String getArtista(){
         return artista;
     }
+    /**
+     * Altera o artista do show para um outro artista
+     * @param artista o novo artista
+     */
     public void setArtista(String artista){
         this.artista = artista;
     }
 
+    /**
+     * Exibe os detalhes presentes em um show
+     */
     @Override
     public void exibirDetalhes(){
         exibirInfosBasicas();

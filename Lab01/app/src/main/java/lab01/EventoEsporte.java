@@ -28,16 +28,33 @@ public class EventoEsporte extends Evento {
         this.equipe2 = equipe2;
     }
 
+    /**
+     * Retorna o tipo de esporte do evento
+     * @return o tipo de esporte do evento
+     */
     public String getTipoEsporte(){
         return tipoEsporte;
     }
+
+    /**
+     * Retorna a equipe da casa no evento de esporte
+     * @return a equipe da casa no evento de esporte
+     */
     public String getEquipe1(){
         return equipe1;
     }
+
+    /**
+     * Retorna a equipe visitante no evento de esporte
+     * @return a equipe visitante no evento de esporte
+     */
     public String getEquipe2(){
         return equipe2;
     }
 
+    /**
+     * Exibe os detalhes presentes em um evento de esportes
+     */
     @Override
     public void exibirDetalhes(){
         exibirInfosBasicas();
