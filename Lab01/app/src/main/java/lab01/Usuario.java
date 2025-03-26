@@ -5,13 +5,6 @@
  */
 package lab01;
 
-import java.util.List;
-
-import javax.lang.model.type.NullType;
-
-import java.util.ArrayList;
-
-
 /**
  * Contém a estrutura de implementação de um Usuario.
  * 
@@ -45,6 +38,10 @@ public class Usuario {
      */
     public String getNome(){
         return nome;
+    }
+
+    public String getEmail(){
+        return email;
     }
 
     /**
