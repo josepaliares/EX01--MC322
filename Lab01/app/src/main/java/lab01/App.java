@@ -27,23 +27,23 @@ public class App {
 
         // Dados sobre evento
         System.out.println("Local: " + local.getNome());
-        System.out.println("Nome do usuário: " + usuario.getNome());
+        System.out.println("Nome do usuário: " + usuario.getNome() + "\n");
 
         // DEMONSTRAÇÃO PASSO 1
 
         Local localExemplo1 = new Local("Campinas Hall", 100);
-        Evento eventoExemplo1 = new Evento("Entorta Bixo", localExemplo1, 50);
+        EventoShow eventoExemplo1 = new EventoShow("Entorta Bixo", localExemplo1, 50, "Eletrônica", "DJ Blakes", 6);
 
-        IngressoMeia meiaExemplo = new IngressoMeia(eventoExemplo1, 0);
-        IngressoInteira inteiraExemplo = new IngressoInteira(eventoExemplo1, 1);
-        IngressoVIP vipExemplo = new IngressoVIP(eventoExemplo1, 2);
-        IngressoCamarote camaroteExemplo = new IngressoCamarote(eventoExemplo1, 3);
+        IngressoMeia meiaExemplo = new IngressoMeia(eventoExemplo1);
+        IngressoInteira inteiraExemplo = new IngressoInteira(eventoExemplo1);
+        IngressoVIP vipExemplo = new IngressoVIP(eventoExemplo1);
+        IngressoCamarote camaroteExemplo = new IngressoCamarote(eventoExemplo1);
 
         System.out.println("Preço dos ingressos para o evento: " + eventoExemplo1.getNome());
-        System.out.println("Meia: " + meiaExemplo.getPreco());
-        System.out.println("Inteira: " + inteiraExemplo.getPreco());
-        System.out.println("VIP: " + vipExemplo.getPreco());
-        System.out.println("Camarote: " + CamaroteExemplo.getPreco());
+        System.out.println("Meia: R$" + meiaExemplo.getPreco());
+        System.out.println("Inteira: R$" + inteiraExemplo.getPreco());
+        System.out.println("VIP: R$" + vipExemplo.getPreco());
+        System.out.println("Camarote: R$" + camaroteExemplo.getPreco() + "\n");
 
         // DEMONSTRAÇÃO PASSO 2
 
@@ -52,15 +52,15 @@ public class App {
         eventoExemplo2.exibirDetalhes();
 
         Local localExemplo3 = new Local("Parque da Expoflora", 300);
-        EventoFestival eventoExemplo3 = new EventoFestival("Expoflora", local, 50, "Flores", "CiaVerde");
+        EventoFestival eventoExemplo3 = new EventoFestival("Expoflora", localExemplo3, 50, "Flores", "CiaVerde");
         eventoExemplo3.exibirDetalhes();
 
         Local localExemplo4 = new Local("Gate 22", 50);
-        EventoShow eventoExemplo4 = new EventoShow("SUBMUNDO808", local, 80, "Rock", 6);
+        EventoShow eventoExemplo4 = new EventoShow("SUBMUNDO808", localExemplo4, 80, "Rock", "mu540", 6);
         eventoExemplo4.exibirDetalhes();
 
         Local localExemplo5 = new Local("National Theatre - London", 100);
-        EventoTeatro eventoExemplo5 = new EventoTeatro("Peter Pan", local, 100, 2, "Julian Ovendon");
+        EventoTeatro eventoExemplo5 = new EventoTeatro("Peter Pan", localExemplo5, 100, "Julian Ovendon", 2);
         eventoExemplo5.exibirDetalhes();
 
         // DEMONSTRAÇÃO PASSO 3
@@ -77,7 +77,7 @@ public class App {
         eventoExemplo1.adicionarIngresso(vipExemplo, usuario2);
         eventoExemplo1.adicionarIngresso(camaroteExemplo, usuario1);
 
-        faturamentoExemplo1 = eventoExemplo1.calcularFaturamento();
+        double faturamentoExemplo1 = eventoExemplo1.calcularFaturamento();
         System.out.println("Faturamento do " + eventoExemplo1.getNome() + ": R$" + String.format("%.2f", faturamentoExemplo1));
 
         // DEMONSTRAÇÃO PASSO 4

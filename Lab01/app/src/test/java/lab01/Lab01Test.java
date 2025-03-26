@@ -13,7 +13,7 @@ public class Lab01Test {
     public void getCapacidadeEventoShow() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "MPB", "Djavan", 6);
         assertEquals(2000, testEvento.getCapacidade());
     }
 
@@ -27,7 +27,7 @@ public class Lab01Test {
     public void setAndGetArtistaEventoShow() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "MPB", "Djavan", 6);
         testEvento.setArtista("Anavitória");
         assertEquals("Anavitória", testEvento.getArtista());
     }
@@ -41,7 +41,7 @@ public class Lab01Test {
     public void getPrecoIngressoMeia() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "MPB", "Djavan", 6);
         IngressoMeia ingressoMeia = new IngressoMeia(testEvento);
         assertEquals(100, ingressoMeia.getPreco());
     }
@@ -55,7 +55,7 @@ public class Lab01Test {
     public void getPrecoIngressoInteira() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250, "MPB", "Djavan", 6);
         IngressoInteira ingressoInteira = new IngressoInteira(testEvento);
         assertEquals(250, ingressoInteira.getPreco());
     }
@@ -69,9 +69,9 @@ public class Lab01Test {
     public void adicionarIngressoMeia() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "MPB", "Djavan", 6);
         IngressoMeia ingressoMeia = new IngressoMeia(testEvento);
-        Usuario usuarioTest = new Usuario("Gabriel", "gabriel@me.com");
+        Usuario usuarioTest = new Usuario("Gabriel", "gabriel@me.com", 17, false);
         testEvento.adicionarIngresso(ingressoMeia, usuarioTest);
         assertEquals(1, testEvento.getIngressosVendidos().size());
         assertEquals(ingressoMeia, usuarioTest.getIngresso());
@@ -82,5 +82,5 @@ public class Lab01Test {
      * Testa o método adicionarEvento do HistoricoEventos
      * Verifica se os dois eventos foram adicionados à lista de eventos
      * do HistoricoEventos
-
+    */
 }

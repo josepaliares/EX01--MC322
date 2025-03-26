@@ -3,10 +3,14 @@
  * 
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
+package lab01;
+
 import java.util.List;
+
+import javax.lang.model.type.NullType;
+
 import java.util.ArrayList;
 
-package lab01;
 
 /**
  * Contém a estrutura de implementação de um Usuario.
@@ -19,7 +23,7 @@ public class Usuario {
     private String email;
     private int idade;
     private boolean vip;
-    private List<Ingresso> ingressos;
+    private Ingresso ingresso;
 
     /**
      * Construtor da classe Usuario
@@ -33,7 +37,6 @@ public class Usuario {
         this.email = email;
         this.idade = idade;
         this.vip = vip;
-        this.ingressos = new ArrayList<>();
     }
 
     /**
@@ -68,12 +71,12 @@ public class Usuario {
         this.nome = nome;
     }
     
-    public List<Ingresso> getIngressos() {
-        return ingressos;
+    public Ingresso getIngresso() {
+        return ingresso;
     }
 
-    public void adicionarIngresso(Ingresso ingresso) {
-        this.ingressos.add(ingresso);
+    public void setIngresso(Ingresso ingresso){
+        this.ingresso = ingresso;
     }
 
 }

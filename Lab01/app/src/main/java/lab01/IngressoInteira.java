@@ -12,10 +12,9 @@ public class IngressoInteira extends Ingresso{
      * Construtor da classe IngressoInteira
      * utilizando o construtor da classe pai
      * @param evento o evento associado ao IngressoInteira
-     * @param codigo o codigo associado ao IngressoInteira
      */
-    public IngressoInteira(Evento evento, int codigo){
-        super(evento, codigo);
+    public IngressoInteira(Evento evento){
+        super(evento);
     }
 
     /**

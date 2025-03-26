@@ -12,10 +12,9 @@ public class IngressoMeia extends Ingresso{
      * Construtor da classe IngressoMeia
      * utilizando o construtor da classe pai
      * @param evento o evento associado ao IngressoMeia
-     * @param codigo o codigo associado ao IngressoMeia
      */
-    public IngressoMeia(Evento evento, int codigo){
-        super(evento, codigo);
+    public IngressoMeia(Evento evento){
+        super(evento);
     }
 
     /**

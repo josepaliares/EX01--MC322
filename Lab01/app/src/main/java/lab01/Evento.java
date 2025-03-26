@@ -1,13 +1,13 @@
 /*
- * Evento.java
- * 
- * Material usado na disciplina MC322 - Programação orientada a objetos.
- */
+* Evento.java
+* 
+* Material usado na disciplina MC322 - Programação orientada a objetos.
+*/
+package lab01;
 
 import java.util.List;
 import java.util.ArrayList;
 
-package lab01;
 
 /**
  * Contém a estrutura de implementação de um Evento.
@@ -41,6 +41,10 @@ public abstract class Evento {
         return nome;
     }
 
+    public double getCapacidade(){
+        return this.local.getCapacidade();
+    }
+
     /**
      * Altera o nome do Evento para `nome` 
      * @param nome o novo nome do Evento
@@ -51,7 +55,7 @@ public abstract class Evento {
 
 
     public void exibirInfosBasicas(){
-        System.out.println("Nome do evento" + this.getNome());
+        System.out.println("Nome do evento: " + this.getNome());
         System.out.println("Local do evento: " + this.local.getNome());
     }
     public abstract void exibirDetalhes();
@@ -72,6 +76,10 @@ public abstract class Evento {
         this.precoIngresso = precoIngresso;
     }
 
+    public List<Ingresso> getIngressosVendidos(){
+        return ingressosVendidos;
+    }
+
     public void adicionarIngresso(Ingresso ingresso, Usuario usuario) {
 
         if (ingresso instanceof IngressoMeia) {
@@ -87,7 +95,7 @@ public abstract class Evento {
         }
         
         ingressosVendidos.add(ingresso);
-        usuario.adicionarIngresso(ingresso);
+        usuario.setIngresso(ingresso);
         System.out.println("Ingresso comprado com sucesso!");
     }
 

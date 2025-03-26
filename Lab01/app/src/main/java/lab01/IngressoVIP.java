@@ -12,10 +12,9 @@ public class IngressoVIP extends Ingresso{
      * Construtor da classe IngressoVIP
      * utilizando o construtor da classe pai
      * @param evento o evento associado ao IngressoVIP
-     * @param codigo o codigo associado ao IngressoVIP
      */
-    public IngressoVIP(Evento evento, int codigo){
-        super(evento, codigo);
+    public IngressoVIP(Evento evento){
+        super(evento);
     }
 
     /**

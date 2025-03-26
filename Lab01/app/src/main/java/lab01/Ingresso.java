@@ -14,18 +14,18 @@ package lab01;
 public abstract class Ingresso {
 
     private Evento evento;
-    private int codigo;
 
     /**
      * Construtor da classe Ingresso
      * @param evento o evento associado ao Ingresso
-     * @param codigo o codigo associado ao Ingresso
      */
-    public Ingresso(Evento evento, int codigo){
+    public Ingresso(Evento evento){
         this.evento = evento;
-        this.codigo = codigo;
     }
 
+    public Evento getEvento(){
+        return this.evento;
+    }
     /**
      * Retorna o preço do Ingresso
      * @return o preço do Ingresso

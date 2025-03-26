@@ -36,7 +36,7 @@ public class EventoTeatro extends Evento {
     @Override
     public void exibirDetalhes(){
         exibirInfosBasicas();
-        System.out.println("Total de atos:" + this.getAtos());
-        System.out.println("Diretor da peça" + this.getDiretor());
+        System.out.println("Total de atos: " + this.getAtos());
+        System.out.println("Diretor da peça: " + this.getDiretor() + "\n");
     }
 }
